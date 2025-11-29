@@ -1,0 +1,67 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+}
+body{
+    width:100%;
+    min-height:100vh;
+    background-color:black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.ove{
+    width:300px;
+    height:300px;
+    position:relative;
+    transform-style:preserve-3d;
+    animation-name:rot;
+    animation-duration:4s;
+    animation-timing-function:linear;
+    animation-iteration-count:infinite;
+}
+@keyframes rot{
+    from{
+        transform:rotateX(0deg) rotateY(0deg);
+    }
+    to{
+        transform:rotateX(360deg) rotateY(360deg);
+    }
+}
+.box{
+    width:300px;
+    height:300px;
+    position:absolute;
+    /* border-radius:10px; */
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+h1{
+    font-size:60px;
+}
+.top{
+    background-color:rgba(255, 255, 255,0.6);
+    transform:rotateX(90deg) translateZ(150px);
+}
+.bottom{
+    background-color: rgba(229, 229, 10, 0.6);
+    transform:rotateX(-90deg) translateZ(150px);
+}
+.right{
+    background-color:rgba(138, 43, 226,0.6);
+    transform:rotateY(90deg) translateZ(150px);
+}
+.left{
+    background-color:rgba(228, 24, 24, 0.6);
+    transform:rotateY(-90deg) translateZ(150px);
+}
+.back{
+    background-color:rgba(5, 244, 5,0.6);
+    transform:rotateX(-180deg) translateZ(150px);
+}
+.front{
+    background-color: rgba(0, 255, 255,0.6);
+    transform:rotateX(0deg) translateZ(150px);
+}
